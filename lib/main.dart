@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:watchlist/presentation/widgets/core_bottom_navigation.dart';
 import 'package:watchlist/presentation/widgets/core_header.dart';
+import 'package:watchlist/presentation/widgets/core_bottom_navigation.dart';
 
 void main() {
   runApp(MyApp());

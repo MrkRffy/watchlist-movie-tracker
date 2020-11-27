@@ -1,11 +1,11 @@
-class Movie {
+class Show {
   final int id, year, numOfRatings, criticsReview, metascoreRating;
   final double rating;
   final List<String> genre;
   final String plot, title, poster, backdrop;
   final List<Map> cast;
 
-  Movie({
+  Show({
     this.poster,
     this.backdrop,
     this.title,
@@ -21,9 +21,9 @@ class Movie {
   });
 }
 
-// our demo data movie data
-List<Movie> movies = [
-  Movie(
+// our demo data Show data
+List<Show> shows = [
+  Show(
     id: 1,
     title: "Bloodshot",
     year: 2020,
@@ -41,27 +41,27 @@ List<Movie> movies = [
     cast: [
       {
         "orginalName": "James Mangold",
-        "movieName": "Director",
+        "ShowName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
-        "movieName": "Carroll",
+        "ShowName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
-        "movieName": "Ken Miles",
+        "ShowName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
-        "movieName": "Mollie",
+        "ShowName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
     ],
   ),
-  Movie(
+  Show(
     id: 2,
     title: "Ford v Ferrari ",
     year: 2019,
@@ -80,27 +80,27 @@ List<Movie> movies = [
     cast: [
       {
         "orginalName": "James Mangold",
-        "movieName": "Director",
+        "ShowName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
-        "movieName": "Carroll",
+        "ShowName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
-        "movieName": "Ken Miles",
+        "ShowName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
-        "movieName": "Mollie",
+        "ShowName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
     ],
   ),
-  Movie(
+  Show(
     id: 1,
     title: "Onward",
     year: 2020,
@@ -118,22 +118,22 @@ List<Movie> movies = [
     cast: [
       {
         "orginalName": "James Mangold",
-        "movieName": "Director",
+        "ShowName": "Director",
         "image": "assets/images/actor_1.png",
       },
       {
         "orginalName": "Matt Damon",
-        "movieName": "Carroll",
+        "ShowName": "Carroll",
         "image": "assets/images/actor_2.png",
       },
       {
         "orginalName": "Christian Bale",
-        "movieName": "Ken Miles",
+        "ShowName": "Ken Miles",
         "image": "assets/images/actor_3.png",
       },
       {
         "orginalName": "Caitriona Balfe",
-        "movieName": "Mollie",
+        "ShowName": "Mollie",
         "image": "assets/images/actor_4.png",
       },
     ],
