@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:watchlist/constants/strings.dart';
 
-class Header extends StatelessWidget implements PreferredSizeWidget {
+class CoreHeader extends StatelessWidget implements PreferredSizeWidget {
+  static const double headerHeight = 80.0;
+
   @override
-  Size get preferredSize => new Size.fromHeight(80.0);
+  Size get preferredSize => new Size.fromHeight(headerHeight);
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      alignment: Alignment.bottomCenter,
       padding: EdgeInsets.symmetric(
         vertical: 15.0,
         horizontal: 25.0,
