@@ -35,27 +35,35 @@ class DiscoverPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
-            child: Text(
-              "Popular Movies",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
-            ),
+          _buildPopularMovies(movies),
+          SizedBox(
+            height: 50.0,
           ),
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15.0),
-              child: MovieCards(
-                movies: movies,
-              ),
-            ),
-          )
         ],
       ),
     );
   }
 
-  _buildPopularMovies() {}
+  _buildPopularMovies(movies) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 35.0),
+          child: Text(
+            "Popular Movies",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18.0),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: 15.0),
+          child: MovieCards(
+            movies: movies,
+          ),
+        ),
+      ],
+    );
+  }
 
   _buildLoading() => Center(
         child: CircularProgressIndicator(),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:watchlist/config/router_config.dart';
+import 'package:watchlist/constants/routes.dart';
 import 'package:watchlist/constants/strings.dart';
 import 'package:watchlist/data/providers/api_service.dart';
-import 'package:watchlist/presentation/pages/discover_page.dart';
-import 'package:watchlist/presentation/widgets/core_bottom_navigation.dart';
-import 'package:watchlist/presentation/widgets/core_header.dart';
 
 void main() {
   ApiService();
@@ -16,13 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: appName,
-      home: Scaffold(
-        appBar: CoreHeader(),
-        body: SafeArea(
-          child: DiscoverPage(),
-        ),
-        bottomNavigationBar: CoreBottomNavigation(),
-      ),
+      initialRoute: homeRoute,
+      onGenerateRoute: RouterConfig.generateRoute,
     );
   }
 }

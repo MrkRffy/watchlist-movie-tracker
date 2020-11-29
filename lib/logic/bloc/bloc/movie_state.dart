@@ -11,11 +11,6 @@ class MovieSuccess extends MovieState {
   final List<Movie> movies;
 
   MovieSuccess({@required this.movies}) : assert(movies != null);
-
-  @override
-  List<Object> get props => [
-        movies
-      ];
 }
 
 class MovieError extends MovieState {}

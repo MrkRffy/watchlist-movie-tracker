@@ -13,7 +13,7 @@ class CoreHeader extends StatelessWidget implements PreferredSizeWidget {
       alignment: Alignment.bottomCenter,
       padding: EdgeInsets.symmetric(
         vertical: 15.0,
-        horizontal: 25.0,
+        horizontal: 35.0,
       ),
       child: Row(
         children: [

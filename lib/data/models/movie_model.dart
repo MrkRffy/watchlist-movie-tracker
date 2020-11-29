@@ -8,6 +8,9 @@ class Movie {
   int id;
   @JsonKey(name: 'vote_count')
   int voteCount;
+  int budget;
+  int revenue;
+  int runtime;
 
   double popularity;
   @JsonKey(name: 'vote_average')
@@ -25,8 +28,15 @@ class Movie {
   String overview;
   @JsonKey(name: 'original_language')
   String originalLanguage;
+  String status;
 
   List<int> genreIds;
+  @JsonKey(name: 'production_companies')
+  List<Object> productionCompanies;
+  @JsonKey(name: 'production_countries')
+  List<Object> productionCountries;
+  @JsonKey(name: 'spoken_languages')
+  List<Object> spokenLanguages;
 
   bool adult;
   bool video;
@@ -52,11 +62,13 @@ class Movie {
 
   Map<String, dynamic> toJson() => _$MovieToJson(this);
 
-  bool hasPoster() => this.posterPath?.isNotEmpty;
+  int getId() => this.id;
 
   String getTitle() => this.title;
 
   String getGenres() => "Crime, Drama, Thriller";
+
+  bool hasPoster() => this.posterPath?.isNotEmpty;
 
   String getPosterUrl({size = PosterSize.ORIGINAL}) {
     return '$secureImageBaseUrl$size${this.posterPath}';
