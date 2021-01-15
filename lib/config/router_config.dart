@@ -9,11 +9,12 @@ class RouterConfig {
     switch (settings.name) {
       case homeRoute:
         return MaterialPageRoute(builder: (context) => HomePage());
-      case movieDetailRoute:
+      case showDetailRoute:
         return MaterialPageRoute(
-            builder: (context) => MovieDetailPage(
-                  arguments: settings.arguments,
-                ));
+          builder: (context) => MovieDetailPage(
+            arguments: settings.arguments,
+          ),
+        );
       default:
         return MaterialPageRoute(builder: (context) => HomePage());
     }

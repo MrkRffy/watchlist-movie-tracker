@@ -8,5 +8,8 @@ abstract class MovieApiService extends ChopperService {
   @Get(path: '/popular')
   Future<Response> getPopular();
 
+  @Get(path: '/upcoming')
+  Future<Response> getUpcoming();
+
   static MovieApiService create([ChopperClient client]) => _$MovieApiService(client);
 }

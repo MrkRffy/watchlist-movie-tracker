@@ -10,6 +10,7 @@ class CoreHeader extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(color: Colors.transparent),
       alignment: Alignment.bottomCenter,
       padding: EdgeInsets.symmetric(
         vertical: 15.0,

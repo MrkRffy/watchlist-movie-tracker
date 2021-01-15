@@ -1,37 +1,32 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'movie_model.dart';
+part of 'show_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Movie _$MovieFromJson(Map<String, dynamic> json) {
-  return Movie(
+Show _$ShowFromJson(Map<String, dynamic> json) {
+  return Show(
     id: json['id'] as int,
     voteCount: json['vote_count'] as int,
     popularity: (json['popularity'] as num)?.toDouble(),
     voteAverage: (json['vote_average'] as num)?.toDouble(),
     title: json['title'] as String,
+    name: json['name'] as String,
     originalTitle: json['original_title'] as String,
     posterPath: json['poster_path'] as String,
     backdropPath: json['backdrop_path'] as String,
     overview: json['overview'] as String,
     originalLanguage: json['original_language'] as String,
+    genreIds: (json['genreIds'] as List)?.map((e) => e as int)?.toList(),
     adult: json['adult'] as bool,
     video: json['video'] as bool,
     mediaType: json['media_type'] as String,
-    releaseDate: json['release_date'] as String,
-  )
-    ..name = json['name'] as String
-    ..originalName = json['original_name'] as String
-    ..genreIds = (json['genreIds'] as List)?.map((e) => e as int)?.toList()
-    ..budget = json['budget'] as int
-    ..genres = json['genres'] as List
-    ..imdbId = json['imdb_id'] as String;
+  )..originalName = json['original_name'] as String;
 }
 
-Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
+Map<String, dynamic> _$ShowToJson(Show instance) => <String, dynamic>{
       'id': instance.id,
       'vote_count': instance.voteCount,
       'popularity': instance.popularity,
@@ -48,8 +43,4 @@ Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
       'genreIds': instance.genreIds,
       'adult': instance.adult,
       'video': instance.video,
-      'budget': instance.budget,
-      'genres': instance.genres,
-      'release_date': instance.releaseDate,
-      'imdb_id': instance.imdbId,
     };

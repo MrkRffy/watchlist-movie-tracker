@@ -1,10 +1,10 @@
 import 'package:json_annotation/json_annotation.dart';
 import 'package:watchlist/data/models/show_model.dart';
 
-part 'movie_model.g.dart';
+part 'tv_model.g.dart';
 
 @JsonSerializable()
-class Movie extends Show {
+class TV extends Show {
   int budget;
   List<Object> genres;
 
@@ -13,7 +13,7 @@ class Movie extends Show {
   @JsonKey(name: 'imdb_id')
   String imdbId;
 
-  Movie({
+  TV({
     int id,
     int voteCount,
     double popularity,
@@ -41,9 +41,9 @@ class Movie extends Show {
           originalLanguage: originalLanguage,
           adult: adult,
           video: video,
-          mediaType: 'movie',
+          mediaType: 'tv',
         );
 
-  factory Movie.fromJson(Map<String, dynamic> json) => _$MovieFromJson(json);
-  Map<String, dynamic> toJson() => _$MovieToJson(this);
+  factory TV.fromJson(Map<String, dynamic> json) => _$TVFromJson(json);
+  Map<String, dynamic> toJson() => _$TVToJson(this);
 }

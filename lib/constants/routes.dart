@@ -1,2 +1,2 @@
 const String homeRoute = '/';
-const String movieDetailRoute = '/movie';
+const String showDetailRoute = '/movie';

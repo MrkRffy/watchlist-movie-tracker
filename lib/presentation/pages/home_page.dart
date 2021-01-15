@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:watchlist/presentation/pages/discover_page.dart';
-import 'package:watchlist/presentation/widgets/core_bottom_navigation.dart';
-import 'package:watchlist/presentation/widgets/core_header.dart';
+
+import '../widgets/core_bottom_navigation.dart';
+import '../widgets/core_header.dart';
+import 'discover_page.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
-  PageController _pageController = new PageController(initialPage: 0, keepPage: true);
+  final _pageController = PageController(initialPage: 0, keepPage: true);
 
   int _selectedTabIndex = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromRGBO(245, 245, 245, 1),
       appBar: CoreHeader(),
       body: SafeArea(
         child: _buildPageView(),
@@ -29,7 +29,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   void _onTabTapped(index) {
     setState(() {
       _selectedTabIndex = index;
-      _pageController.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.ease);
+      _pageController.animateToPage(
+        index,
+        duration: Duration(milliseconds: 500),
+        curve: Curves.ease,
+      );
     });
   }
 
@@ -48,17 +52,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       );
 
   Widget _buildBottomNavigation() {
-    List<NavItem> _navItems = [
+    var _navItems = <NavItem>[
       NavItem(icon: Icons.search_rounded, label: "Discover"),
       NavItem(icon: Icons.ondemand_video_rounded, label: "Library"),
       NavItem(icon: Icons.settings, label: "Settings"),
     ];
 
     List<Widget> _buildBuildNavItems() {
-      List<Widget> items = List();
+      var items = <Widget>[];
 
       _navItems.asMap().forEach((index, navItem) {
-        bool isSelected = _selectedTabIndex == index;
+        var isSelected = _selectedTabIndex == index;
 
         items.add(GestureDetector(
           onTap: () => _onTabTapped(index),

@@ -18,4 +18,16 @@ class MovieRepository {
 
     return movies;
   }
+
+  Future<List<Movie>> getUpcomingMovies() async {
+    final movieService = chopper.getService<MovieApiService>();
+    final response = await movieService.getUpcoming();
+
+    final moviesJson = json.decode(response.bodyString);
+    final moviesList = moviesJson['results'].map((data) => Movie.fromJson(data)).toList();
+
+    List<Movie> movies = List<Movie>.from(moviesList);
+
+    return movies;
+  }
 }
